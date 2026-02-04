@@ -15,7 +15,7 @@ FROM eclipse-temurin:21-jre
 WORKDIR /app
 
 # Copy the built jar
-COPY --from=build /app/target/com.sample.api.jar app.jar
+COPY --from=build /app/target/*.jar app.jar
 
 # Render provides PORT env variable
 ENV PORT=8080
